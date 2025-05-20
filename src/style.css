@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+/* Font */
+@theme inline {
+  --font-comfortaa: 'Comfortaa', sans-serif;
+}
+
+/* Transisi halaman */
+::view-transition-olds {
+  opacity: 0;
+  transform: scale(0.95);
+}
+::view-transition-new {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Warna utama (light mode) */
+:root {
+  --background: #e7edd9;
+  --secondary-background: #ffffff;
+  --foreground: #0c3284;
+  --main-foreground: #ffffff;
+  --main: #3b82f6;
+  --border: #d1d5db;
+  --ring: #3b82f6;
+  --overlay: rgba(0, 0, 0, 0.6);
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Warna utama (dark mode) */
+.dark {
+  --background: #1f2937;
+  --secondary-background: #374151;
+  --foreground: #f3f4f6;
+  --main-foreground: #1f2937;
+  --main: #60a5fa;
+  --border: #4b5563;
+  --ring: #60a5fa;
+  --overlay: rgba(255, 255, 255, 0.1);
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Theme variable mapping */
+@theme inline {
+  --color-main: var(--main);
+  --color-background: var(--background);
+  --color-secondary-background: var(--secondary-background);
+  --color-foreground: var(--foreground);
+  --color-main-foreground: var(--main-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --shadow-shadow: var(--shadow);
+  --font-weight-base: 500;
+  --font-weight-heading: 700;
+  --radius-base: 0.75rem;
+}
+
+/* Font default */
+body {
+  font-family: var(--font-comfortaa);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+/* Container */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* Form Label */
+label {
+  @apply text-sm font-semibold text-foreground leading-none;
+}
+
+/* Input */
+.input-custom {
+  @apply h-10 w-full rounded-base border-2 bg-secondary-background px-3 py-2 text-sm text-foreground placeholder:text-gray-400 focus:ring-2 focus:ring-ring border-border transition disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+/* Textarea */
+.textarea-custom {
+  @apply min-h-[100px] w-full rounded-base border-2 bg-secondary-background px-3 py-2 text-sm text-foreground placeholder:text-gray-400 focus:ring-2 focus:ring-ring border-border transition disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+/* Buttons */
+.button-custom {
+  @apply inline-flex items-center justify-center h-10 px-4 py-2 rounded-base bg-main text-main-foreground border-2 border-border shadow-md hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.button-custom-neutral {
+  @apply inline-flex items-center justify-center h-10 px-4 py-2 rounded-base bg-secondary-background text-foreground border-2 border-border shadow-md hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition;
+}
+
+.button-custom-destructive {
+  @apply inline-flex items-center justify-center h-10 px-4 py-2 rounded-base bg-red-600 text-white border-2 border-border shadow-md hover:bg-red-700 hover:translate-x-1 hover:translate-y-1 transition;
+}
+
+/* Select */
+.select-custom {
+  @apply w-[180px] h-10 px-3 py-2 rounded-base bg-main text-main-foreground border-2 border-border flex items-center justify-between gap-2 focus:ring-2 focus:ring-ring disabled:opacity-50;
+}
+
+/* card */
+.card {
+  @apply rounded-lg p-6 border-2 bg-white text-gray-800 shadow-md transition hover:shadow-lg hover:border-blue-500;
+}
+
+.card-header {
+  @apply text-xl font-semibold text-blue-700;
+}
+
+.card-body {
+  @apply text-sm leading-relaxed text-gray-600;
+}
+
+/* Story Cards */
+.story-container {
+  @apply grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6;
+}
+
+.story-card-skeleton {
+  @apply w-full h-80 bg-gray-200 rounded-base animate-pulse;
+} */
+
+/* Page Layouts */
+.page-wrapper {
+  @apply container my-20 md:my-28 lg:my-32;
+}
+
+.page-error-wrapper {
+  @apply container min-h-screen flex items-center justify-center text-center text-lg;
+}
+
+/* Maps */
+.maps-loading-container {
+  @apply h-[600px] bg-gray-100 animate-pulse;
+}
+
+.maps-container {
+  @apply h-[600px] w-full rounded-lg overflow-hidden;
+}

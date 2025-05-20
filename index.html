@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ceritain</title>
+    <meta name="author" content="Ulinnaja Aldi" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header
+      class="fixed left-0 top-0 z-[9999] mx-auto flex h-[70px] w-full items-center border-b-4 border-border bg-white px-5"
+    >
+      <button
+        id="skip-link"
+        class="button-custom-neutral py-2 px-3 absolute top-0 left-0 z-[9999] -translate-y-full -translate-x-full focus:translate-x-0 focus:translate-y-0 focus:opacity-100 focus:transition-all focus:duration-300 focus-within:translate-x-0 focus-within:translate-y-0 focus-within:opacity-100 focus:m-3 focus-within:m-3 bg-white"
+      >
+        Menuju Halaman Utama
+      </button>
+      <nav
+        class="container relative overflow-x-hidden mx-auto flex items-center justify-between py-2"
+      >
+      <a
+      href="#/"
+      class="inline-flex items-center justify-center min-w-[45px] min-h-[45px] px-3 py-2 text-lg font-bold text-gray-800"
+      >
+          CeritaBersama
+      </a>
+  
+
+        <button
+          id="drawer-button"
+          class="text-2xl font-bold text-gray-900 lg:hidden cursor-pointer focus:outline-red-400"
+          aria-label="Buka menu"
+        >
+          ☰
+        </button>
+
+        <ul
+          id="navigation-drawer"
+          class="fixed -right-[100%] top-0 translate-x-full transition-all ease-in-out duration-300 h-screen w-full flex flex-col px-5 pt-8 pb-5 sm:w-6/12 lg:w-fit lg:flex-row lg:translate-x-0 lg:static lg:h-auto lg:px-0 lg:pt-0 lg:pb-0 lg:bg-transparent lg:gap-5 gap-4 border-l-2 lg:border-l-0 border-border bg-background"
+        ></ul>
+      </nav>
+    </header>
+    <main tabindex="-1" id="main-content" class="focus:outline-none"></main>
+    <footer class="border-t-4 border-border bg-white px-5 py-5 text-center sm:text-base text-sm" >
+      By Winda O Nababan &copy; 2025 ❤❤
+    </footer>
+
+    <script type="module" src="/src/index.ts"></script>
+  </body>
+</html>

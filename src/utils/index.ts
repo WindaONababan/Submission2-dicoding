@@ -63,6 +63,22 @@ export function setupSkipToContent(element: HTMLElement | null, mainContent: HTM
   });
 }
 
+// export function convertBase64ToUint8Array(base64String?: string) {
+//   if (!base64String) {
+//     throw new Error('base64String parameter is required and cannot be empty or undefined');
+//   }
+
+//   const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
+//   const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
+//   const rawData = atob(base64);
+//   const outputArray = new Uint8Array(rawData.length);
+
+//   for (let i = 0; i < rawData.length; i++) {
+//     outputArray[i] = rawData.charCodeAt(i);
+//   }
+//   return outputArray;
+// }
+
 export function transitionHelper({
   skipTransition = false,
   updateDOM,

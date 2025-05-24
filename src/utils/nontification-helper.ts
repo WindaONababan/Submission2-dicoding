@@ -1,5 +1,5 @@
 import { convertBase64ToUint8Array } from '.';
-import { SUBSCRIPTION_KEY } from '../constants/config';
+import { VAPID_PUBLIC_KEY } from '../constants/config';
 import { subscribePushNotification, unsubscribePushNotification } from '../data/api';
 import { useToast } from './toast';
 
@@ -42,12 +42,24 @@ export async function getPushSubscription() {
   return await registration.pushManager.getSubscription();
 }
 
+// export function generateSubscribeOptions() {
+//   return {
+//     userVisibleOnly: true,
+//     applicationServerKey: convertBase64ToUint8Array(VAPID_PUBLIC_KEY),
+//   };
+// }
+
 export function generateSubscribeOptions() {
+  if (!VAPID_PUBLIC_KEY) {
+    throw new Error("VAPID_PUBLIC_KEY is missing. Check your environment variables.");
+  }
+
   return {
     userVisibleOnly: true,
-    applicationServerKey: convertBase64ToUint8Array(SUBSCRIPTION_KEY),
+    applicationServerKey: convertBase64ToUint8Array(VAPID_PUBLIC_KEY),
   };
 }
+
 
 export async function isCurrentPushSubscriptionAvailable() {
   return !!(await getPushSubscription());

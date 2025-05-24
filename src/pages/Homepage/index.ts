@@ -18,6 +18,7 @@ export default class HomePage {
     <!-- SECTION PETA -->
 <section id="map-container" class="container mt-24 md:mt-28 lg:mt-32 2xl:mt-40">
   <div class="flex flex-col gap-2 items-center justify-center text-center mb-8">
+  <img src="public/images/logofs.png" alt="Logo Ceritain" class="w-16 h-16 mb-2 rounded-full object-cover">
     <h1 class="text-3xl sm:text-4xl font-extrabold text-main tracking-tight">🌍 Ceritain!</h1>
     <p class="text-base sm:text-xl text-foreground/80 font-medium">Ceritakan semua yang ingin kamu bagi ke dunia 🌟</p>
   </div>

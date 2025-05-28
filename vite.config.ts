@@ -28,13 +28,13 @@ export default defineConfig({
         theme_color: '#FFFFFF',
         icons: [
           {
-            purpose: 'maskable',
+            purpose: 'any',
             sizes: '512x512',
             src: 'icon_logox512.png',
             type: 'image/png',
           },
           {
-            purpose: 'any',
+            purpose: 'maskable',
             sizes: '353x449',
             src: 'icon512_maskable.png',
             type: 'image/png',
